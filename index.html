@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title>PWA ITAMAR</title>
+   <title>PWA DANY</title>
     <script src="js/registraServiceWorker.js"></script>
 
     <!-- Ícono para la página web. Debe ponerse en la raíz de la página. -->
@@ -34,7 +34,7 @@
        <style>
       :root {
         --color-primario: black;
-        --color-primario-fondo: #00FF00;
+        --color-primario-fondo: #3342FF;
         --color-contenido: black;
         --color-contenido-fondo: white;
         --color-active: #4646462c;
@@ -86,46 +86,58 @@
       h2{
  text-align:center;
 
-font-size: 100%;
+font-size: 200%;
          }
    
     </style>
   </head>
   <body>
-   <div >
-    <h2>BIENVENIDO A LA CALCULADORA PARA FORMULAS MATEMATICAS</h2>
-       
-       
-        <form name="calculator">
-          <h3>Calculadora </h3>
-          <p>Haz algun calculo para ver el resultado.</p>
-          <input type="textfield" name="ans" value="">
-          <br>
-          <input type="button" value="1" onClick="document.calculator.ans.value+='1'">
-          <input type="button" value="2" onClick="document.calculator.ans.value+='2'">
-          <input type="button" value="3" onClick="document.calculator.ans.value+='3'">
-          <input type="button" value="+" onClick="document.calculator.ans.value+='+'">
-          <br>
-          <input type="button" value="4" onClick="document.calculator.ans.value+='4'">
-          <input type="button" value="5" onClick="document.calculator.ans.value+='5'">
-          <input type="button" value="6" onClick="document.calculator.ans.value+='6'">
-          <input type="button" value="-" onClick="document.calculator.ans.value+='-'">
-          <br>
-          <input type="button" value="7" onClick="document.calculator.ans.value+='7'">
-          <input type="button" value="8" onClick="document.calculator.ans.value+='8'">
-          <input type="button" value="9" onClick="document.calculator.ans.value+='9'">
-          <input type="button" value="*" onClick="document.calculator.ans.value+='*'">
-          <br>
-          <input type="button" value="0" onClick="document.calculator.ans.value+='0'">
-          <input type="reset" value="c">
-          <input type="button" value="/" onClick="document.calculator.ans.value+='/'">
-          <input type="button" value="=" onClick="document.calculator.ans.value=eval(document.calculator.ans.value)">
-          </form>
-      </body>
-      </html>
+
+    <script>
+      function multiplicar(){
+        m = document.getElementById("multiplicando").value;
+        v = document.getElementById("multiplicador").value;
+        r = m*v;
+        document.getElementById("resultado").value = r;
+        }
+      </script>
+      </head>
+      <body>
+      
+      <h2>Cantidad de Movimiento</h2>
+
+      <h3>Formula</h3>
+      <h3>Q= m.v</h3>
+        <h4>
+          <p>Q:cantidad de movimiento (kg.m / s)</p>
+          <p>m:masa (kg)</p>
+          <p>v:velocidad (m/s)</p>
+      </h4>
+      <h4>
+          Ejemplo
+         <p> Una bola de 400 g se mueve en un momento dado, como se muestra a continuación, con una velocidad de módulo de 2 m / s. 
+          ¿Cuál es el módulo, dirección y dirección de la cantidad de movimiento de la pelota en ese momento?
+      </p>
+      </h4>
+      <h3>Resultado
+          <p>Q=(0.4)(2)=0.8 kg.m/s</p>
+      
+          </h3>
+      <form id="multiplicar">
+          <label>
+              Masa
+        <input type="text" id="multiplicando" value=0 onChange="multiplicar();"> *
+      </label>
+      
+      <label>
+          Velocidad
+        <input type="text" id="multiplicador" value=0 onChange="multiplicar();"> =
+      </label>
+      <label>
+          Cantidad de movimiento
+        <input type="text" id="resultado">
+      </label>
  
-        
-    </div>
       <nav>
         <ul>
           <li>
